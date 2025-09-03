@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="http://sapservice.smileshopy.com/invoicetemplates/en/v1/fonts/proximanova-fonts.css" rel="stylesheet"
+		type="text/css" media="all" />
+</head>
+<style>
+	* {
+		font-family: 'Proxima Nova Reg';
+		color: #000;
+	}
+
+	.root {
+		width: 800px;
+		height: 1180px;
+		margin: 0 auto;
+		padding: 5px;
+		line-height: 18px;
+		font-size: 13px;
+		color: #333;
+		position: relative;
+	}
+
+	.ash-color {
+		color: #969696;
+	}
+
+	.space {
+		width: 100%;
+		clear: both;
+		height: 10px;
+	}
+
+	.space-50px {
+		width: 100%;
+		clear: both;
+		height: 50px;
+	}
+
+	.semi-strong {
+		font-family: 'Proxima Nova Semi-bold';
+	}
+
+	.strong {
+		font-weight: 600;
+	}
+
+	.text-left {
+		text-align: left;
+	}
+
+	.text-right {
+		text-align: right;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	/* Title */
+	.header {
+		width: 100%;
+		overflow: hidden;
+		clear: both;
+		border-bottom: 1px dashed #8fc8f3;
+	}
+
+	.title {
+		font-weight: 600;
+		text-align: right;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+
+	.type {
+		font-size: 20px;
+		border-left: 5px solid #007ad9;
+		padding-left: 10px;
+	}
+
+	/* Header Left*/
+	.header-left {
+		width: 45%;
+		float: left;
+	}
+
+	.header-left table {
+		width: 100%;
+	}
+
+
+	.header-left table .title {
+		padding: 20px 0px 5px 0px;
+	}
+
+	.header-left table td {
+		padding: 5px 5px 5px 0px;
+	}
+
+	/* Header right*/
+	.header-right {
+		width: 55%;
+		float: left;
+	}
+
+	.header-right table {
+		width: 100%;
+	}
+
+	.header-right td {
+		border-bottom: 1px dashed #8fc8f3;
+		padding: 5px 5px 5px 0px;
+		vertical-align: top;
+	}
+
+	.header-right td div {
+		margin-bottom: 5px;
+	}
+
+	.header-right tr:last-child td {
+		border-bottom: none;
+	}
+
+
+	/* Content */
+	.content {
+		width: 100%;
+		clear: both;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px dashed #8fc8f3;
+	}
+	
+	.content table {
+		width: 100%;
+	}
+	
+	.content table td:first-child {
+		width: 50%;
+	}
+
+	.content .barcode {
+		padding: 20px;
+		border: 2px solid #8dffa0;
+		background: #e7ffe8;
+		max-width: 100%;
+		text-align:center;
+	}
+
+	.content .invoices {
+		font-size: 20px;
+		line-height: 30px;
+        padding: 20px;
+	}
+
+
+	/* Note */
+	.note {
+		clear: both;
+		overflow: hidden;
+		font-family: 'Proxima Nova Semi-bold';
+		margin: 30px 0px 20px;
+	}
+
+	.note table {
+		width: 100%;
+	}
+
+	.note td {
+		vertical-align: top;
+		padding: 5px;
+	}
+
+	.note td:last-child {
+		background: #f0f4f7;
+		height: 60px;
+	}
+
+	.signature {
+		border: 0;
+		border-bottom: 1px solid #000;
+	}
+
+	.footer {
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+	}
+</style>
+
+<body>
+	<div class="root">
+		<div class="header">
+
+			<!-- Header logo -->
+			<div align="center" style="margin: 15px 0px">
+				<<#COMPANY_LOGO>>
+			</div>
+
+
+			<!-- Head left -->
+			<div class="header-left">
+			<<#COMPANY_INFO>>
+			</div>
+
+			<!-- Head right -->
+			<div class="header-right">
+				<div class="title">
+					<span class="type">GATE PASS</span>
+				</div>
+				<table>
+					<tr>
+						<td colspan="3"></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="ash-color">Document No</div>
+							<<#DOCUMENT_NUMBER>>
+						</td>
+						<td>
+							<div class="ash-color">Document Date</div>
+							<<#DOCUMENT_DATE>>
+						</td>
+						<td>
+							<div class="ash-color">Page</div>
+							<<#PAGE_NO>> / <<#TOTAL_PAGES>>
+						</td>
+					</tr>
+					<tr>
+					    <<#VENDOR_INFO>>
+						<td>
+							<div class="ash-color">Reference No</div>
+							<<#REFERENCE_NO>>
+
+						</td>
+						<td>
+							<div class="ash-color">Delivery Date</div>
+							<<#DELIVERY_DATE>>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<!-- Content -->
+		<div class="content">
+			<table>
+				<tr>
+					<td>
+						<div class="barcode">
+							<img src=<<#BARCODE_HTML>> />
+						</div>
+					</td>
+					<td>
+						<div class="text-center invoices"><strong>Invoices: </strong><<#INVOICES>></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+
+		<div>
+			<!-- SIGNATURE -->
+			<div class="space-50px"></div>
+			<div>
+				<table>
+					<tr>
+						<td style="width: 50px">SIGNATURE:</td>
+						<td><input type="text" class="signature" /></td>
+						<td style="width: 50px">DATE:</td>
+						<td><input type="text" class="signature" /></td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- NOTE -->
+			<div class="note">
+				<table>
+					<tr>
+						<td style="width: 100px">Note:</td>
+						<td><<#REMARKS>></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div>
+			<p style="height:0px;"></p>
+			<div align="center">Thanks. We appreciate your business
+				This sales delivery has been generated using <a href="www.x-factr.com">x-factr</a>.
+			</div>
+		</div>
+
+		<div align="center" style="margin: 15px 0px" class="footer">
+			<<#COMPANY_LOGO>>
+		</div>
+	</div>
+</body>
+
+</html>

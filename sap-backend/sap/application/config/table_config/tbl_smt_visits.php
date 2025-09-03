@@ -1,0 +1,260 @@
+<?php
+$config['SMT_VISITS']['excel_file_name'] = time() . '_sms_vists.xlsx';
+$config['SMT_VISITS']['columns_list']	 = array(
+	array(
+		'display_name'		=> 'Id',
+		'tbl_field_name' 	=> 'id',
+		'field_key' 		=> 'id',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 0,
+		'sort_flag'			=> 0,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 0,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Team Name',
+		'tbl_field_name' 	=> 'team_name',
+		'field_key' 		=> 'teamName',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 0,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Employee Name',
+		'tbl_field_name' 	=> 'first_name',
+		'field_key' 		=> 'empName',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 0,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Partner Name',
+		'tbl_field_name' 	=> 'partner_name',
+		'field_key' 		=> 'partnerName',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 0,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Check In Datetime',
+		'tbl_field_name' 	=> 'check_in_datetime',
+		'field_key' 		=> 'checkInDatetime',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Check Out Datetime',
+		'tbl_field_name' 	=> 'check_out_datetime',
+		'field_key' 		=> 'checkOutDatetime',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 0,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Check In Latitude',
+		'tbl_field_name' 	=> 'check_in_latitude',
+		'field_key' 		=> 'checkInLatitude',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Check In Longitude',
+		'tbl_field_name' 	=> 'check_in_longitude',
+		'field_key' 		=> 'checkInLongitude',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Check Out Latitude',
+		'tbl_field_name' 	=> 'check_out_latitude',
+		'field_key' 		=> 'checkOutLatitude',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Check Out Longitude',
+		'tbl_field_name' 	=> 'check_out_longitude',
+		'field_key' 		=> 'checkOutLongitude',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 0,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Business Partner Id',
+		'tbl_field_name' 	=> 'business_partner_id',
+		'field_key' 		=> 'businessPartnerId',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 0,
+		'update_flag'		=> 0,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Remarks',
+		'tbl_field_name' 	=> 'remarks',
+		'field_key' 		=> 'remarks',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Sap Id',
+		'tbl_field_name' 	=> 'sap_id',
+		'field_key' 		=> 'sapId',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Posting Status',
+		'tbl_field_name' 	=> 'posting_status',
+		'field_key' 		=> 'postingStatus',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Sap Error',
+		'tbl_field_name' 	=> 'sap_error',
+		'field_key' 		=> 'sapError',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	)
+);
+?>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="http://sapservice.castleready.com/invoicetemplates/en/v1/fonts/proximanova-fonts.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<style>
+	* {
+		font-family: 'Proxima Nova Reg';
+		color: #000;
+	}
+
+	.root {
+		width: 800px;
+		height: 1180px;
+		margin: 0 auto;
+		padding: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		color: #000;
+		position: relative;
+	}
+
+	.ash-color {
+		color: #666;
+	}
+
+	.space {
+		width: 100%;
+		clear: both;
+		height: 15px;
+	}
+
+	.semi-strong {
+		font-family: 'Proxima Nova Semi-bold';
+	}
+
+	.strong {
+		font-weight: 700;
+	}
+
+	.text-left {
+		text-align: left;
+	}
+
+	.text-right {
+		text-align: right;
+	}
+
+	/* Title */
+	.header {
+		width: 100%;
+		overflow: hidden;
+		clear: both;
+		border-bottom: 2px solid #000;
+		padding-bottom: 10px;
+	}
+
+	.title {
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+
+	.type {
+		font-size: 24px;
+		padding-left: 0;
+	}
+
+	/* Header Left */
+	.header-left {
+		width: 50%;
+		float: left;
+	}
+
+	.header-left table {
+		width: 100%;
+	}
+
+	.header-left table td {
+		padding: 5px 0;
+	}
+
+	/* Header Right */
+	.header-right {
+		width: 50%;
+		float: right;
+	}
+
+	.header-right table {
+		width: 100%;
+	}
+
+	.header-right td {
+		padding: 5px 0;
+		vertical-align: top;
+	}
+
+	.header-right td div {
+		margin-bottom: 5px;
+	}
+
+	/* Content */
+	.content {
+		width: 100%;
+		clear: both;
+		margin-top: 20px;
+	}
+
+	.currency {
+		text-align: right;
+		padding: 10px 0;
+	}
+
+	.content table {
+		background-color: transparent;
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+	}
+
+	.content table th {
+		background: #e6e6e6;
+		padding: 8px;
+		font-size: 13px;
+		font-family: 'Proxima Nova Semi-bold';
+	}
+
+	.content table td {
+		border-bottom: 1px solid #f4f4f4;
+		padding: 8px;
+		vertical-align: top;
+	}
+
+	/* Summary */
+	.summary {
+		width: 40%;
+		float: right;
+		margin-top: 20px;
+	}
+
+	.summary table {
+		width: 100%;
+	}
+
+	.summary td {
+		padding: 5px;
+		border: none;
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	.summary td:last-child {
+		font-family: 'Proxima Nova Semi-bold';
+	}
+
+	.summary tr:last-child td {
+		border-top: 2px solid #000;
+	}
+
+	/* Note */
+	.note {
+		clear: both;
+		margin-top: 20px;
+	}
+
+	.note table {
+		width: 100%;
+	}
+
+	.note td {
+		padding: 5px;
+	}
+
+	.note td:last-child {
+		background: none;
+	}
+
+	.signature {
+		border: 0;
+		border-bottom: 1px solid #000;
+		width: 150px;
+		display: inline-block;
+	}
+
+	.footer {
+		width: 100%;
+		position: absolute;
+		bottom: 20px;
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="root">
+		<div class="header">
+			<!-- Header logo -->
+			<div align="center" style="margin: 15px 0px">
+				<div class="title">
+					<span class="type">SALES QUOTE</span>
+				</div>				
+			</div>
+			<img src="http://localhost:8090/sap-backend/sap/public/company_logo/Nehmeh_Logo.png" height="70">
+			<!-- Head left -->
+			<div class="header-left">
+				<table>
+					<tr>
+						<td class="semi-strong">Chennai</td>
+					</tr>
+					<tr>
+						<td class="semi-strong">NEHMEH</td>
+					</tr>
+					<tr>
+						<td>Qatar <br>  </td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Head right -->
+			<div class="header-right">
+				<table>
+					<tr>
+						<td class="ash-color">Document No:</td>
+						<td>45</td>
+					</tr>
+					<tr>
+						<td class="ash-color">Document Date:</td>
+						<td>2025-07-21</td>
+					</tr>
+					<tr>
+						<td class="ash-color">Page:</td>
+						<td>1 / 1</td>
+					</tr>
+					<tr>
+			<td>
+				<div class="ash-color">Customer No</div>
+				cu0002
+			</td>
+			<td>
+				<div class="ash-color">Reference No</div>
+				
+			</td><tr>
+			<td colspan="3">
+				<div class="ash-color"><br>Customer Details</div>
+				Name : TestBp01<br>
+				Email Id : test@gmail.com,
+				Contact No :  9876543<br>
+				Tax Code/ GST/ VAT : <br>
+			</td>
+		</tr>
+					<div class="space"></div>
+					<table>
+						<tr>
+				<td class="ash-color">Sales Employee Details</td>
+			</tr>
+				<tr>
+				<td>
+					Name : 
+				</td>						
+			</tr>
+					</table>
+				</table>
+			</div>
+		</div>
+
+		<!-- Content -->
+		<div class="content">
+			<div class="currency">
+				<span class="ash-color">Currency: </span> <span class="semi-strong">QAR</span>
+			</div>
+			<table class="inner-table">
+				
+			<tr>
+				<th class="text-left">Sno</th>
+				<th class="text-left" style="min-width: 150px">Description</th>
+				<th class="text-left">Bin</th>
+				<th class="text-left">Quantity</th>
+				<th class="text-left">UoM</th>
+				<th class="text-left">Price</th>
+				<th class="text-left">Tax %</th>
+				<th class="text-left">Tax Value</th>
+				<th class="text-left">Total</th>
+			</tr>
+			
+				<tr>
+			<td class="text-left">1</td>
+			<td class="text-left"><div class="semi-strong">RADIATOR CORE</div>
+			<div><span class="ash-color">Item Code:</span>NAR/43.5X46--4</div>
+			<div><span class="ash-color">Discount:</span> %</div></td>
+			<td class="text-left">SYSTEM</td>
+			<td class="text-left">1</td>
+			<td class="text-left">????</td>
+			<td class="text-left">0</td>
+			<td class="text-left">5</td>
+			<td class="text-left">0</td>
+			<td class="text-left">0</td>
+			</tr>
+			</table>
+		</div>
+		
+		<!-- Summary -->
+		<div>
+			<!-- Summary -->
+				<div class="summary">
+					<table>
+						<tr>
+							<td>Sub Total:</td>
+							<td>0 QAR</td>
+						</tr>
+						<tr>
+							<td>DP: 0 %</td>
+							<td>0 QAR</td>
+						</tr>
+						<tr>
+							<td>Total Before Tax</td>
+							<td>0 QAR</td>
+						</tr>
+						<tr>
+							<td>Rounding</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Tax Amount</td>
+							<td>0 QAR</td>
+						</tr>
+						<tr class="strong">
+							<td>Total Amount</td>
+							<td>0 QAR</td>
+						</tr>
+					</table>
+				</div>
+				
+				<!-- PAYMENT TERMS -->
+				<div class="space"></div>
+				<div>
+					<table>
+						<tr>
+							<td style="width: 100px">Payament Term:</td>
+							<td></td>
+						</tr>
+					</table>			
+				</div>
+
+				<!-- SIGNATURE -->
+				<div class="space"></div>
+				<div>
+					<table>
+						<tr>
+							<td style="width: 50px">SIGNATURE:</td>
+							<td><input type="text" class="signature" /></td>
+							<td style="width: 50px">DATE:</td>
+							<td><input type="text" class="signature" /></td>
+						</tr>
+					</table>			
+				</div>
+				<!-- NOTE -->
+				<div class="space"></div>
+				<div class="note">
+					<table>
+						<tr>
+							<td style="width: 100px">Note:</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+		</div>
+		
+		<!-- Note -->
+		<div class="note">
+			<p style="height:0px;"></p>
+					<div align="center">Thanks. We appreciate your business
+					This sales quote has been generated using <a href="www.x-factr.com">x-factr</a>. 
+					</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+To write into the excel
+=======================
+
+1.  Excel.php 
+2.  third_party folder
+
+the above file and folder is necessary to writ into the excel.
+
+
+To read from excel
+===================
+
+1. Spreadsheet_Excel_Reader.php
+
+the above file is used to read the excel file.
+
+
+sample code for write into the excel
+====================================
+
+function exportintoexcel()
+	
+	{
+	
+	$this->load->model('managestudents_model');
+	$ctrldata=$this->managestudents_model->exportintoexcel($this->input->post());
+	
+	
+	exec('chmod 777 files');
+	//load our new PHPExcel library
+	$this->load->library('Excel');
+	//activate worksheet number 1
+	$this->excel->setActiveSheetIndex(0);
+	//name the worksheet
+	$this->excel->getActiveSheet()->setTitle('test worksheet');
+	//set header values
+	
+	$this->excel->getActiveSheet()->setCellValue('A1', "Name");
+	$this->excel->getActiveSheet()->setCellValue('B1', "Category");
+	$this->excel->getActiveSheet()->setCellValue('C1', "Mobile Number");
+	
+	
+	//styling header
+	
+	
+	$styleArray = array(
+	'font' => array(
+		'bold' => true,
+	),
+	'alignment' => array(
+		'horizontal' => PHPExcel_Style_Alignment::HORIZONTAL_RIGHT,
+	),
+	'borders' => array(
+		'outline' => array(
+			'style' => PHPExcel_Style_Border::BORDER_THIN,
+		),
+		
+	),
+	);
+	
+	$this->excel->getActiveSheet()->getStyle('A1:C1')->applyFromArray($styleArray);
+    //$this->excel->getActiveSheet()->getStyle('A1:C1')->getFont()->getColor()->setARGB(PHPExcel_Style_Color::COLOR_RED);
+	$this->excel->getActiveSheet()->getStyle('A1:C1')->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB(PHPExcel_Style_Color::COLOR_YELLOW);
+
+	
+	//set cell content with DATA
+	$i=2;
+	foreach($ctrldata as $key=>$value)
+	{
+	$this->excel->getActiveSheet()->setCellValue('A'.$i, $value["name"]);
+	$this->excel->getActiveSheet()->setCellValue('B'.$i, $value["classname"]);
+	$this->excel->getActiveSheet()->setCellValue('C'.$i, $value["mobilenumber"]);
+	$i=$i+1;
+	}
+	 $this->excel->getActiveSheet()->getColumnDimension('A')->setAutoSize(true);	
+	 $this->excel->getActiveSheet()->getColumnDimension('B')->setAutoSize(true);
+	 $this->excel->getActiveSheet()->getColumnDimension('C')->setAutoSize(true);
+
+	 
+	 
+	 
+	 
+	$filename='just_some_random_name.xls'; //save our workbook as this file name
+	header('Content-Type: application/vnd.ms-excel'); //mime type
+	header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
+	header('Cache-Control: max-age=0'); //no cache
+	//readfile($filename);			 
+	//save it to Excel5 format (excel 2003 .XLS file), change this to 'Excel2007' (and adjust the filename extension, also the header mime type)
+	//if you want to save it as .XLSX Excel 2007 format
+	$objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');  
+	//force user to download the Excel file without writing it to server's HD
+	$objWriter->save('files/exportfile.xls');
+	echo "files/exportfile.xls";
+	}
+	
+	
+	
+sample code for read from excel
+================================
+
+			$this->load->library('Spreadsheet_Excel_Reader');
+			$data		= new Spreadsheet_Excel_Reader($filename);
+			
+			$this->load->model('managestudents_model');
+			$ctrldata=$this->managestudents_model->uploadpupillist($data);
+			
+			
+			public function uploadpupillist($data)
+			{
+				$count=$data->rowcount($sheet_index=0);
+			
+				$this->db->query("truncate table ".$this->branchname."tempforupload") ;
+			
+			
+				for ($i = 2; $i <= $count; $i++)
+				{
+					if($data->val($i,2)!="")
+					{
+					
+					$loopdata["pupilid"]=$data->val($i,1);
+					
+					$loopdata["name"]=$data->val($i,2);
+					
+					$loopdata["category"]=$data->val($i,3);
+					
+					$loopdata["mobilenumber"]=$data->val($i,4);
+					$loopdata["emailid"]=$data->val($i,5);
+					$loopdata["userid"]=$this->loggeduser;
+					$this->db->insert($this->branchname.'tempforupload',$loopdata);
+					
+					}
+					else
+					{
+					break;
+					}
+				}
+			}
+	
+	
+	
+	

@@ -1,0 +1,243 @@
+<?php
+$config['MASTER_LOCATION']['columns_list']	= array(
+	array(
+		'display_name'		=> 'Location Number',
+		'tbl_field_name' 	=> 'location_no',
+		'field_key' 		=> 'locationNo',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Location Name',
+		'tbl_field_name' 	=> 'location_name',
+		'field_key' 		=> 'locationName',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Ship To Name',
+		'tbl_field_name' 	=> 'ship_to_name',
+		'field_key' 		=> 'shipToName',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Ship To Address',
+		'tbl_field_name' 	=> 'ship_to_address',
+		'field_key' 		=> 'shipToAddress',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Street Number',
+		'tbl_field_name' 	=> 'street_no',
+		'field_key' 		=> 'streetNo',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Block',
+		'tbl_field_name' 	=> 'block',
+		'field_key' 		=> 'block',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'building',
+		'tbl_field_name' 	=> 'building',
+		'field_key' 		=> 'building',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'State',
+		'tbl_field_name' 	=> 'state_id',
+		'field_key' 		=> 'stateId',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'city',
+		'tbl_field_name' 	=> 'city',
+		'field_key' 		=> 'city',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Zip Code',
+		'tbl_field_name' 	=> 'zip_code',
+		'field_key' 		=> 'zipCode',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'status',
+		'tbl_field_name' 	=> 'status',
+		'field_key' 		=> 'status',
+		'field_type' 	 	=> 'number',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 1,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Sap Id',
+		'tbl_field_name' 	=> 'sap_id',
+		'field_key' 		=> 'sapId',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 1,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Posting Status',
+		'tbl_field_name' 	=> 'posting_status',
+		'field_key' 		=> 'postingStatus',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+	array(
+		'display_name'		=> 'Sap Error',
+		'tbl_field_name' 	=> 'sap_error',
+		'field_key' 		=> 'sapError',
+		'field_type' 	 	=> 'alpha',
+		'search_flag'		=> 1,
+		'sort_flag'			=> 1,
+		'excel_flag'		=> 0,
+		'create_flag'		=> 1,
+		'edit_flag'		    => 1,
+		'update_flag'		=> 1,
+		'field_validation'	=> array(
+			'is_mandatory'   => 0,
+			'is_numeric' 	 => 0,
+			'is_date'        => 0,
+	 )
+	),
+);
+
+?>
